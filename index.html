@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тест — неотложная помощь (медсестра)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1>Участие медицинской сестры в оказании неотложной помощи</h1>
+      <p class="subtitle">Государственный экзамен · тестовые задания</p>
+    </header>
+
+    <section id="screen-start" class="screen active">
+      <p class="intro">В каждом вопросе выберите один ответ. После прохождения вы увидите результат и список ошибок.</p>
+      <button type="button" class="btn btn-primary" id="btn-start">Начать тест</button>
+    </section>
+
+    <section id="screen-quiz" class="screen">
+      <div class="progress-bar" aria-hidden="true">
+        <div class="progress-bar__fill" id="progress-fill"></div>
+      </div>
+      <p class="progress-text" id="progress-text">Вопрос 1 из 98</p>
+      <h2 class="question" id="question-text">Вопрос</h2>
+      <ul class="answers" id="answers-list" role="radiogroup" aria-labelledby="question-text"></ul>
+      <div class="nav-buttons">
+        <button type="button" class="btn btn-secondary" id="btn-prev" disabled>Назад</button>
+        <button type="button" class="btn btn-primary" id="btn-next">Далее</button>
+      </div>
+      <div class="call-text" aria-hidden="true">
+        подними телефон пожалуйста<br>
+      </div>
+    </section>
+
+    <section id="screen-result" class="screen">
+      <h2 class="result-title">Результат</h2>
+      <p class="result-score" id="result-score"></p>
+      <p class="result-hint" id="result-hint"></p>
+      <div id="result-mistakes" class="mistakes"></div>
+      <div class="nav-buttons nav-buttons--single">
+        <button type="button" class="btn btn-primary" id="btn-retry">Пройти снова</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="questions-embedded.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
